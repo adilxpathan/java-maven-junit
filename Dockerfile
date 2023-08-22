@@ -9,10 +9,10 @@ RUN apk update && apk add bash
 WORKDIR /app
 
 # Copy the fat jar into the container at /app
-COPY /target/maven-code-coverage-1.0-SNAPSHOT.jar /app
+COPY /target/maven-code-coverage.jar /app
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
 
 # Run jar file when the container launches
-CMD ["java", "-jar", "maven-code-coverage-1.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "maven-code-coverage.jar"]
